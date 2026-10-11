@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- FICTIONAL fixture. Acme AI is not a real company. -->
+<rss version="2.0">
+  <channel>
+    <title>Acme AI News</title>
+    <link>https://acme.example/news</link>
+    <item>
+      <title>Acme AI cuts API prices for Helio-7 mini</title>
+      <link>https://acme.example/index/helio-7-mini-price-cut?utm_source=rss</link>
+      <pubDate>Wed, 08 Oct 2026 15:00:00 GMT</pubDate>
+      <description>Acme AI announced a 50% price reduction for Helio-7 mini input tokens in the API, effective immediately for all prepaid and monthly billing accounts.</description>
+    </item>
+    <item>
+      <title>Introducing Helio-8, now generally available</title>
+      <link>https://acme.example/index/helio-8-ga</link>
+      <pubDate>Thu, 09 Oct 2026 14:00:00 GMT</pubDate>
+      <description>Acme AI is launching Helio-8, a new foundation model generally available on the API for all customers. Existing Helio-7 endpoints keep the same tool-calling contract.</description>
+    </item>
+    <item>
+      <title>New fine-tuning recipes for structured outputs</title>
+      <link>https://acme.example/index/structured-outputs-recipes</link>
+      <pubDate>Tue, 07 Oct 2026 12:00:00 GMT</pubDate>
+      <description>The API now ships official fine-tuning recipes for structured outputs so teams can keep JSON schemas stable across model upgrades.</description>
+    </item>
+  </channel>
+</rss>

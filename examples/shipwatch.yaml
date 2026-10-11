@@ -1,0 +1,16 @@
+# See src/shipwatch/config.py default_config_text() for the full template.
+# `shipwatch init` writes this file next to a copy of the source pack.
+
+data_dir: .shipwatch
+sources_file: sources.yaml
+
+llm:
+  base_url: http://127.0.0.1:8787/v1
+  model: freewhirr
+  api_key_env: SHIPWATCH_API_KEY
+
+brief:
+  top_n: 12
+  since: 7d
+  output_dir: out
+  html: false

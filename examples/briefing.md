@@ -1,0 +1,44 @@
+# Shipwatch briefing — 27 Sep 2026 – 11 Oct 2026
+
+Window: `14d` · mode: `heuristic` · generated 2026-10-11 12:00 UTC
+
+Every bullet cites a source item. Flagged claims did not fully match the source text.
+
+> Sample briefing generated from fictional fixtures; companies and products are invented.
+
+## Contoso Models News: Atlas ships computer use in the EU · score 1.00
+
+- Contoso Models expanded computer use for Atlas to customers in the European Union. ([Contoso Models News](https://contoso.example/news#atlas-ships-computer-use))
+
+## Contoso Models News: Legacy Completions API sunset date · score 0.95
+
+- Contoso Models will deprecate the legacy Completions API on 15 January 2027. ([Contoso Models News](https://contoso.example/news#legacy-completions-api-sunset-date))
+
+## Acme AI News: Acme AI cuts API prices for Helio-7 mini · score 0.95
+
+- Acme AI announced a 50% price reduction for Helio-7 mini input tokens in the API, effective immediately for all prepaid and monthly billing accounts. ([Acme AI News](https://acme.example/index/helio-7-mini-price-cut))
+- Acme AI announced a 50% price reduction for Helio-7 mini input tokens in the API. ([Mirror](https://mirror.example/acme-price-cut))
+
+## Northwind Agents: northwind 1.2.1 · score 0.89
+
+- Security advisory CVE-2026-4242: a vulnerability in the tool-calling sandbox is patched. ([Northwind Agents](https://github.com/example/northwind/releases/tag/v1.2.1))
+
+## Acme AI News: Introducing Helio-8, now generally available · score 0.88
+
+- Acme AI is launching Helio-8, a new foundation model generally available on the API for all customers. ([Acme AI News](https://acme.example/index/helio-8-ga))
+
+## Northwind Agents: northwind 1.2.0 · score 0.75
+
+- Northwind Agents 1.2.0 adds a stable tool-calling interface and removes the deprecated DeskRetrievalChain. ([Northwind Agents](https://github.com/example/northwind/releases/tag/v1.2.0))
+
+## Fabrikam Docs: New docs page: batch · score 0.74
+
+- New page listed on the Fabrikam Docs sitemap: https://docs.fabrikam.example/atlas-api/docs/batch ([Fabrikam Docs](https://docs.fabrikam.example/atlas-api/docs/batch))
+
+## Acme AI News: New fine-tuning recipes for structured outputs · score 0.70
+
+- The API now ships official fine-tuning recipes for structured outputs so teams can keep JSON schemas stable across model upgrades. ([Acme AI News](https://acme.example/index/structured-outputs-recipes))
+
+---
+
+**Grounding:** 9 claims · 9 supported · 0 flagged · 0 dropped · coverage 100%

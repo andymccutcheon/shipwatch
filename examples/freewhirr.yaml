@@ -1,0 +1,5 @@
+# Use with: pip install freewhirr && freewhirr serve --port 8787
+llm:
+  base_url: http://127.0.0.1:8787/v1
+  model: freewhirr
+  api_key_env: SHIPWATCH_API_KEY

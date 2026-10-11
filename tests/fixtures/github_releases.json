@@ -1,0 +1,26 @@
+[
+  {
+    "name": "northwind 1.2.0",
+    "tag_name": "v1.2.0",
+    "html_url": "https://github.com/example/northwind/releases/tag/v1.2.0",
+    "published_at": "2026-10-08T18:00:00Z",
+    "draft": false,
+    "body": "FICTIONAL. Northwind Agents 1.2.0 adds a stable tool-calling interface and removes the deprecated DeskRetrievalChain. This is a breaking API change for users still on the 0.x retrieval helpers."
+  },
+  {
+    "name": "northwind 1.2.1",
+    "tag_name": "v1.2.1",
+    "html_url": "https://github.com/example/northwind/releases/tag/v1.2.1",
+    "published_at": "2026-10-10T12:00:00Z",
+    "draft": false,
+    "body": "FICTIONAL. Security advisory CVE-2026-4242: a vulnerability in the tool-calling sandbox is patched. Upgrade before 1 November 2026."
+  },
+  {
+    "name": "draft only",
+    "tag_name": "v1.3.0-rc",
+    "html_url": "https://github.com/example/northwind/releases/tag/v1.3.0-rc",
+    "published_at": "2026-10-10T18:00:00Z",
+    "draft": true,
+    "body": "Should be ignored."
+  }
+]

@@ -1,0 +1,295 @@
+{
+  "id": "2cba4f243a73a59a",
+  "title": "Shipwatch briefing — 27 Sep 2026 – 11 Oct 2026",
+  "generated_at": "2026-10-11T12:00:00Z",
+  "since": "14d",
+  "window_start": "2026-09-27T12:00:00Z",
+  "mode": "heuristic",
+  "sections": [
+    {
+      "heading": "Contoso Models News: Atlas ships computer use in the EU",
+      "score": 1.0,
+      "item_ids": [
+        "78b65db7c90e514d"
+      ],
+      "claims": [
+        {
+          "text": "Contoso Models expanded computer use for Atlas to customers in the European Union.",
+          "source_item_ids": [
+            "78b65db7c90e514d"
+          ],
+          "supported": true,
+          "status": "supported",
+          "evidence": [
+            "Contoso Models expanded computer use for Atlas to customers in the European Union. The feature is generally available on the Messages API. Existing US and UK workspaces keep the same tool-calling contract. No pricing cha"
+          ],
+          "note": null
+        }
+      ]
+    },
+    {
+      "heading": "Contoso Models News: Legacy Completions API sunset date",
+      "score": 0.9469200669153757,
+      "item_ids": [
+        "555a894eb47f5e41"
+      ],
+      "claims": [
+        {
+          "text": "Contoso Models will deprecate the legacy Completions API on 15 January 2027.",
+          "source_item_ids": [
+            "555a894eb47f5e41"
+          ],
+          "supported": true,
+          "status": "supported",
+          "evidence": [
+            "Contoso Models will deprecate the legacy Completions API on 15 January 2027. Migrate to Messages. This is a breaking API change for remaining Completions callers."
+          ],
+          "note": null
+        }
+      ]
+    },
+    {
+      "heading": "Acme AI News: Acme AI cuts API prices for Helio-7 mini",
+      "score": 0.9459675287084094,
+      "item_ids": [
+        "59c14e5d195d4816",
+        "74fb2505314c97d8"
+      ],
+      "claims": [
+        {
+          "text": "Acme AI announced a 50% price reduction for Helio-7 mini input tokens in the API, effective immediately for all prepaid and monthly billing accounts.",
+          "source_item_ids": [
+            "59c14e5d195d4816"
+          ],
+          "supported": true,
+          "status": "supported",
+          "evidence": [
+            "Acme AI announced a 50% price reduction for Helio-7 mini input tokens in the API, effective immediately for all prepaid and monthly billing accounts."
+          ],
+          "note": null
+        },
+        {
+          "text": "Acme AI announced a 50% price reduction for Helio-7 mini input tokens in the API.",
+          "source_item_ids": [
+            "74fb2505314c97d8"
+          ],
+          "supported": true,
+          "status": "supported",
+          "evidence": [
+            "Acme AI announced a 50% price reduction for Helio-7 mini input tokens in the API."
+          ],
+          "note": null
+        }
+      ]
+    },
+    {
+      "heading": "Northwind Agents: northwind 1.2.1",
+      "score": 0.8908509840931875,
+      "item_ids": [
+        "6f38c03e48e4c0ea"
+      ],
+      "claims": [
+        {
+          "text": "Security advisory CVE-2026-4242: a vulnerability in the tool-calling sandbox is patched.",
+          "source_item_ids": [
+            "6f38c03e48e4c0ea"
+          ],
+          "supported": true,
+          "status": "supported",
+          "evidence": [
+            "FICTIONAL. Security advisory CVE-2026-4242: a vulnerability in the tool-calling sandbox is patched. Upgrade before 1 November 2026."
+          ],
+          "note": null
+        }
+      ]
+    },
+    {
+      "heading": "Acme AI News: Introducing Helio-8, now generally available",
+      "score": 0.8812008765230859,
+      "item_ids": [
+        "94d994df94ae0b06"
+      ],
+      "claims": [
+        {
+          "text": "Acme AI is launching Helio-8, a new foundation model generally available on the API for all customers.",
+          "source_item_ids": [
+            "94d994df94ae0b06"
+          ],
+          "supported": true,
+          "status": "supported",
+          "evidence": [
+            "Acme AI is launching Helio-8, a new foundation model generally available on the API for all customers. Existing Helio-7 endpoints keep the same tool-calling contract."
+          ],
+          "note": null
+        }
+      ]
+    },
+    {
+      "heading": "Northwind Agents: northwind 1.2.0",
+      "score": 0.7495024762383318,
+      "item_ids": [
+        "6d96c82ef0d8447d"
+      ],
+      "claims": [
+        {
+          "text": "Northwind Agents 1.2.0 adds a stable tool-calling interface and removes the deprecated DeskRetrievalChain.",
+          "source_item_ids": [
+            "6d96c82ef0d8447d"
+          ],
+          "supported": true,
+          "status": "supported",
+          "evidence": [
+            "FICTIONAL. Northwind Agents 1.2.0 adds a stable tool-calling interface and removes the deprecated DeskRetrievalChain. This is a breaking API change for users still on the 0.x retrieval helpers."
+          ],
+          "note": null
+        }
+      ]
+    },
+    {
+      "heading": "Fabrikam Docs: New docs page: batch",
+      "score": 0.7407924477359868,
+      "item_ids": [
+        "0e1d76451d5fd24f"
+      ],
+      "claims": [
+        {
+          "text": "New page listed on the Fabrikam Docs sitemap: https://docs.fabrikam.example/atlas-api/docs/batch",
+          "source_item_ids": [
+            "0e1d76451d5fd24f"
+          ],
+          "supported": true,
+          "status": "supported",
+          "evidence": [
+            "New page: https://docs.fabrikam.example/atlas-api/docs/batch"
+          ],
+          "note": null
+        }
+      ]
+    },
+    {
+      "heading": "Acme AI News: New fine-tuning recipes for structured outputs",
+      "score": 0.6982781996863321,
+      "item_ids": [
+        "b5dfa8982f4e0a7d"
+      ],
+      "claims": [
+        {
+          "text": "The API now ships official fine-tuning recipes for structured outputs so teams can keep JSON schemas stable across model upgrades.",
+          "source_item_ids": [
+            "b5dfa8982f4e0a7d"
+          ],
+          "supported": true,
+          "status": "supported",
+          "evidence": [
+            "The API now ships official fine-tuning recipes for structured outputs so teams can keep JSON schemas stable across model upgrades."
+          ],
+          "note": null
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "total_claims": 9,
+    "supported": 9,
+    "flagged": 0,
+    "dropped": 0,
+    "coverage_ratio": 1.0
+  },
+  "selected_item_ids": [
+    "78b65db7c90e514d",
+    "555a894eb47f5e41",
+    "59c14e5d195d4816",
+    "74fb2505314c97d8",
+    "6f38c03e48e4c0ea",
+    "94d994df94ae0b06",
+    "6d96c82ef0d8447d",
+    "0e1d76451d5fd24f",
+    "b5dfa8982f4e0a7d"
+  ],
+  "notes": [
+    "Sample briefing generated from fictional fixtures; companies and products are invented."
+  ],
+  "sources": [
+    {
+      "id": "78b65db7c90e514d",
+      "source_id": "contoso-news",
+      "source_name": "Contoso Models News",
+      "url": "https://contoso.example/news#atlas-ships-computer-use",
+      "title": "Atlas ships computer use in the EU",
+      "kind": "pricing_change",
+      "score": 0.9897517619207631
+    },
+    {
+      "id": "555a894eb47f5e41",
+      "source_id": "contoso-news",
+      "source_name": "Contoso Models News",
+      "url": "https://contoso.example/news#legacy-completions-api-sunset-date",
+      "title": "Legacy Completions API sunset date",
+      "kind": "deprecation",
+      "score": 0.9069200669153756
+    },
+    {
+      "id": "59c14e5d195d4816",
+      "source_id": "acme-news",
+      "source_name": "Acme AI News",
+      "url": "https://acme.example/index/helio-7-mini-price-cut",
+      "title": "Acme AI cuts API prices for Helio-7 mini",
+      "kind": "pricing_change",
+      "score": 0.8856054446034218
+    },
+    {
+      "id": "74fb2505314c97d8",
+      "source_id": "mirror",
+      "source_name": "Mirror",
+      "url": "https://mirror.example/acme-price-cut",
+      "title": "Acme AI reduces Helio-7 mini API pricing by 50%",
+      "kind": "pricing_change",
+      "score": 0.8653626717776977
+    },
+    {
+      "id": "6f38c03e48e4c0ea",
+      "source_id": "northwind",
+      "source_name": "Northwind Agents",
+      "url": "https://github.com/example/northwind/releases/tag/v1.2.1",
+      "title": "northwind 1.2.1",
+      "kind": "security",
+      "score": 0.8508509840931875
+    },
+    {
+      "id": "94d994df94ae0b06",
+      "source_id": "acme-news",
+      "source_name": "Acme AI News",
+      "url": "https://acme.example/index/helio-8-ga",
+      "title": "Introducing Helio-8, now generally available",
+      "kind": "model_release",
+      "score": 0.8412008765230858
+    },
+    {
+      "id": "6d96c82ef0d8447d",
+      "source_id": "northwind",
+      "source_name": "Northwind Agents",
+      "url": "https://github.com/example/northwind/releases/tag/v1.2.0",
+      "title": "northwind 1.2.0",
+      "kind": "api_change",
+      "score": 0.7095024762383317
+    },
+    {
+      "id": "0e1d76451d5fd24f",
+      "source_id": "fabrikam-docs",
+      "source_name": "Fabrikam Docs",
+      "url": "https://docs.fabrikam.example/atlas-api/docs/batch",
+      "title": "New docs page: batch",
+      "kind": "api_change",
+      "score": 0.7007924477359868
+    },
+    {
+      "id": "b5dfa8982f4e0a7d",
+      "source_id": "acme-news",
+      "source_name": "Acme AI News",
+      "url": "https://acme.example/index/structured-outputs-recipes",
+      "title": "New fine-tuning recipes for structured outputs",
+      "kind": "api_change",
+      "score": 0.658278199686332
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+# Copy to .github/workflows/weekly-briefing.yml
+# Variant: publish briefs/ to GitHub Pages instead of committing.
+#
+# permissions:
+#   pages: write
+#   id-token: write
+# Then replace the commit step with:
+#   - uses: actions/upload-pages-artifact@v3
+#     with:
+#       path: briefs
+#   - uses: actions/deploy-pages@v4
+
+name: Weekly briefing
+on:
+  schedule:
+    - cron: "0 14 * * 1"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  brief:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install shipwatch
+      - run: |
+          test -f shipwatch.yaml || shipwatch init
+          shipwatch --no-llm run --since 7d --out briefs --html
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add briefs
+          git diff --staged --quiet || git commit -m "chore: weekly shipwatch briefing"
+          git push
