@@ -1,10 +1,34 @@
-"""Item characterization: launch, model, pricing, deprecation, and the rest."""
+"""Item characterization: shipments vs promo, case studies, and the rest."""
 
 from __future__ import annotations
 
 import re
 
 from shipwatch.models import Item, ItemKind
+
+# Non-shipment first so a customer story that mentions an API does not
+# get tagged as a launch or API change.
+_NON_SHIPMENT = re.compile(
+    r"(?:"
+    r"\bhow\s+\w[\w'’.-]*\s+ships?\b"
+    r"|\bships?\s+(?:faster|3×|3x|3 times)\b"
+    r"|\bcase\s+stud(?:y|ies)\b"
+    r"|\bcustomer\s+(?:stor(?:y|ies)|spotlight)\b"
+    r"|\bpartner\s+spotlight\b"
+    r"|\bwebinars?\b"
+    r"|\b(?:we(?:'re| are)|now)\s+hiring\b"
+    r"|\bjoin\s+(?:our|the)\s+team\b"
+    r"|\bopen\s+roles?\b"
+    r"|\b(?:opinion|commentary|editorial)\b"
+    r"|\bour\s+take\b"
+    r"|\bthoughts\s+on\b"
+    r"|\bwhy\s+we\s+(?:believe|think)\b"
+    r"|\bregister\s+now\b"
+    r"|\bsave\s+the\s+date\b"
+    r"|\bpromotional\b"
+    r")",
+    re.I,
+)
 
 _RULES: list[tuple[ItemKind, re.Pattern[str]]] = [
     (
@@ -50,11 +74,25 @@ _RULES: list[tuple[ItemKind, re.Pattern[str]]] = [
 ]
 
 
+_SHIPMENT_TITLE = re.compile(
+    r"\b(introduc(?:e|ing)|launch(?:ed|ing)?|now available|generally available|"
+    r"\bga\b|deprecat|sunset|pric(?:e|ing)|cve-\d)\b",
+    re.I,
+)
+
+
 def characterize(item: Item) -> ItemKind:
-    blob = f"{item.title}\n{item.summary}\n{item.content[:2000]}"
+    title = item.title or ""
+    blob = f"{title}\n{item.summary}\n{item.content[:2000]}"
+    # Title match wins: "How X ships faster" is a story even if the body
+    # mentions an API. A real launch title is not demoted for a footer webinar.
+    if _NON_SHIPMENT.search(title):
+        return ItemKind.NON_SHIPMENT
     for kind, pattern in _RULES:
         if pattern.search(blob):
             return kind
+    if _NON_SHIPMENT.search(blob) and not _SHIPMENT_TITLE.search(title):
+        return ItemKind.NON_SHIPMENT
     return ItemKind.OTHER
 
 

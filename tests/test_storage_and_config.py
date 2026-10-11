@@ -43,3 +43,12 @@ def test_load_config_missing_file(tmp_path: Path, monkeypatch) -> None:
     cfg = load_config(None)
     assert cfg.sources
     assert cfg.llm.model
+
+
+def test_scoring_loads_non_shipment_penalty(tmp_path: Path) -> None:
+    (tmp_path / "shipwatch.yaml").write_text(
+        "scoring:\n  penalties:\n    non_shipment: 0.55\n",
+        encoding="utf-8",
+    )
+    cfg = load_config(tmp_path / "shipwatch.yaml")
+    assert cfg.scoring.non_shipment_penalty == 0.55

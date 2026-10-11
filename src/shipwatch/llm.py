@@ -134,7 +134,7 @@ def _parse_json(raw: str) -> dict[str, Any]:
 def characterization_messages(title: str, content: str) -> list[dict[str, str]]:
     kinds = (
         "launch, model_release, pricing_change, deprecation, "
-        "api_change, availability, security, other"
+        "api_change, availability, security, non_shipment, other"
     )
     return [
         {
@@ -142,7 +142,9 @@ def characterization_messages(title: str, content: str) -> list[dict[str, str]]:
             "content": (
                 "Classify a changelog item. Return JSON "
                 '{"kind": "...", "rationale": "..."}. '
-                f"kind must be one of: {kinds}."
+                f"kind must be one of: {kinds}. "
+                "Use non_shipment for customer case studies, how-X-ships-faster "
+                "stories, promo, webinars, hiring, and opinion posts."
             ),
         },
         {"role": "user", "content": f"Title: {title}\n\n{content[:4000]}"},

@@ -47,6 +47,7 @@ class ScoringSettings:
     recency_half_life_days: float = 7.0
     near_dup_threshold: float = 0.62
     cluster_threshold: float = 0.28
+    non_shipment_penalty: float = 0.40
 
 
 @dataclass
@@ -125,6 +126,8 @@ scoring:
     pricing_change: 0.15
     deprecation: 0.15
     security: 0.10
+  penalties:
+    non_shipment: 0.40
   recency_half_life_days: 7
   near_dup_threshold: 0.62
   cluster_threshold: 0.28
@@ -178,6 +181,7 @@ def parse_sources(payload: Any) -> list[SourceSpec]:
 def _weights(raw: dict[str, Any]) -> ScoringSettings:
     weights = raw.get("weights") or {}
     boosts = raw.get("boosts") or {}
+    penalties = raw.get("penalties") or {}
     return ScoringSettings(
         novelty=float(weights.get("novelty", 0.25)),
         impact=float(weights.get("impact", 0.30)),
@@ -189,6 +193,7 @@ def _weights(raw: dict[str, Any]) -> ScoringSettings:
         recency_half_life_days=float(raw.get("recency_half_life_days", 7)),
         near_dup_threshold=float(raw.get("near_dup_threshold", 0.62)),
         cluster_threshold=float(raw.get("cluster_threshold", 0.28)),
+        non_shipment_penalty=float(penalties.get("non_shipment", 0.40)),
     )
 
 

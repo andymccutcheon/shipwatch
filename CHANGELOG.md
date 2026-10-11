@@ -14,5 +14,8 @@ Initial public release.
 - `--no-llm` extractive briefing, or OpenAI-compatible JSON with retries
 - SQLite archive; Markdown, JSON, RSS, and optional HTML outputs
 - Grounding: every claim cites source items; unsupported claims are dropped or flagged
-- README sample briefing is a live `--no-llm` run of the bundled source pack
-  (2026-10-11). Test fixtures use invented companies only.
+- README sample briefing is `--no-llm` pipeline output from fictional
+  fixtures (Acme AI, Contoso Models, …), not live vendor news
+- `non_shipment` characterization + configurable penalty so case studies,
+  promo, webinars, hiring, and opinion posts rank below real shipments
+- Extractive `--no-llm` claims use paragraph/sentence splitting (no mashed cards)

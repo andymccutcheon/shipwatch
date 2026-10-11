@@ -24,6 +24,7 @@ class ItemKind(str, Enum):
     API_CHANGE = "api_change"
     AVAILABILITY = "availability"
     SECURITY = "security"
+    NON_SHIPMENT = "non_shipment"
     OTHER = "other"
 
 

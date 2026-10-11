@@ -3,14 +3,14 @@
 from __future__ import annotations
 
 from shipwatch.models import Fact, Item, ItemKind
-from shipwatch.textutil import collapse_ws, sentence_split, sha16
+from shipwatch.textutil import clean_claim, collapse_ws, sentence_split, sha16
 
 
 def extract_facts(item: Item, *, limit: int = 8) -> list[Fact]:
     text = item.content or item.summary or item.title
-    sentences = sentence_split(text)
+    sentences = [clean_claim(s) for s in sentence_split(text)]
     if not sentences:
-        sentences = [collapse_ws(item.title)]
+        sentences = [clean_claim(item.title or text)]
     facts: list[Fact] = []
     seen: set[str] = set()
     for sentence in sentences:

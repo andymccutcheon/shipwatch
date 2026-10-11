@@ -109,6 +109,7 @@ def render_html(briefing: Briefing, items: list[Item]) -> str:
             f"<small>score {section.score:.2f}</small></h2><ul>{claims_html}</ul></section>"
         )
     body = "\n".join(blocks) or "<p>No material stories in this window.</p>"
+    notes_html = "".join(f'<p class="note">{escape(note)}</p>' for note in briefing.notes)
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -122,6 +123,7 @@ def render_html(briefing: Briefing, items: list[Item]) -> str:
     h2 {{ font-size: 1.15rem; margin-top: 1.8rem; }}
     small {{ color: #555; font-weight: normal; }}
     .meta {{ color: #444; }}
+    .note {{ color: #444; font-style: italic; }}
     .flag {{ color: #8a4b08; }}
     footer {{ margin-top: 2rem; border-top: 1px solid #ddd; padding-top: 1rem; color: #444; }}
     a {{ color: #0b57d0; }}
@@ -131,6 +133,7 @@ def render_html(briefing: Briefing, items: list[Item]) -> str:
   <h1>{escape(briefing.title)}</h1>
   <p class="meta">Window <code>{escape(briefing.since)}</code>
      · mode <code>{escape(briefing.mode)}</code></p>
+  {notes_html}
   {body}
   <footer>Grounding: {escape(coverage_line(briefing.coverage))}</footer>
 </body>

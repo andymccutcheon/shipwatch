@@ -51,6 +51,56 @@ def test_characterize_kinds() -> None:
         )
         is ItemKind.LAUNCH
     )
+    assert (
+        characterize(
+            make_item(
+                title="How Northwind ships 3× faster with Acme agents",
+                content="Northwind closed 800 tickets. The Acme API is generally available.",
+                kind=ItemKind.OTHER,
+            )
+        )
+        is ItemKind.NON_SHIPMENT
+    )
+    assert (
+        characterize(
+            make_item(
+                title="Join the Contoso webinar next Thursday",
+                content="Register now to hear about Atlas.",
+                kind=ItemKind.OTHER,
+            )
+        )
+        is ItemKind.NON_SHIPMENT
+    )
+    assert (
+        characterize(
+            make_item(
+                title="Contoso Models is now hiring",
+                content="Open roles on the Atlas research team.",
+                kind=ItemKind.OTHER,
+            )
+        )
+        is ItemKind.NON_SHIPMENT
+    )
+    assert (
+        characterize(
+            make_item(
+                title="Our take on open weights",
+                content="Opinion: why we believe smaller models win.",
+                kind=ItemKind.OTHER,
+            )
+        )
+        is ItemKind.NON_SHIPMENT
+    )
+    assert (
+        characterize(
+            make_item(
+                title="Introducing Helio-8, now generally available",
+                content="Register now for the launch webinar. Footer: join the team.",
+                kind=ItemKind.OTHER,
+            )
+        )
+        is ItemKind.LAUNCH
+    )
 
 
 def test_dedup_url_and_near_dup() -> None:
@@ -93,6 +143,57 @@ def test_cluster_groups_related_titles() -> None:
     ]
     clusters = cluster_items(items, threshold=0.2)
     assert len(clusters) >= 2
+
+
+def test_score_ranks_shipment_above_case_study() -> None:
+    settings = ScoringSettings()
+    shipment = make_item(
+        item_id="ship",
+        title="Acme AI cuts API prices for Helio-7 mini",
+        content="Acme AI announced a 50% price reduction for Helio-7 mini input tokens.",
+        kind=ItemKind.OTHER,
+    )
+    story = make_item(
+        item_id="story",
+        source_id="northwind",
+        source_name="Northwind Agents",
+        url="https://contoso.example/how-northwind-ships",
+        title="How Northwind ships 3× faster with Atlas",
+        content="Northwind closed 800 tickets. The Atlas API is generally available.",
+        kind=ItemKind.OTHER,
+    )
+    from shipwatch.pipeline.characterize import apply_characterization
+
+    apply_characterization([shipment, story])
+    assert shipment.kind is ItemKind.PRICING_CHANGE
+    assert story.kind is ItemKind.NON_SHIPMENT
+    score_items([shipment, story], settings, now=NOW)
+    assert shipment.score > story.score
+    assert story.score_breakdown["penalty"] == settings.non_shipment_penalty
+    assert story.score_breakdown["boost"] == 0.0
+    assert shipment.score_breakdown["penalty"] == 0.0
+
+
+def test_sentence_split_unmashes_marketing_cards() -> None:
+    from shipwatch.textutil import clean_claim, sentence_split
+
+    mashed = (
+        "Northwind on Atlas Tripled shipping rate in three months with invented agents "
+        "Two-person team closed 800+ tickets in its first 4 months Builder access via SSO "
+        "and Directory Sync Ships customer-requested changes to production in as little as "
+        "two hours Gives every builder access to models through the Atlas gateway "
+        "Northwind Agents is an invented operations platform."
+    )
+    pieces = sentence_split(mashed)
+    assert len(pieces) >= 3
+    assert all(len(piece) < 220 for piece in pieces)
+    mashed_together = any(
+        "Tripled shipping rate" in piece and "Two-person team" in piece for piece in pieces
+    )
+    assert not mashed_together
+    claim = clean_claim(mashed)
+    assert 24 <= len(claim) <= 220
+    assert "Two-person team closed" not in claim
 
 
 def test_score_boosts_pricing_and_recency() -> None:

@@ -1,379 +1,187 @@
 {
-  "id": "af34873534160008",
+  "id": "2cba4f243a73a59a",
   "title": "Shipwatch briefing — 27 Sep 2026 – 11 Oct 2026",
-  "generated_at": "2026-10-11T02:18:16.802008Z",
+  "generated_at": "2026-10-11T12:00:00Z",
   "since": "14d",
-  "window_start": "2026-09-27T02:18:16.802008Z",
+  "window_start": "2026-09-27T12:00:00Z",
   "mode": "heuristic",
   "sections": [
     {
-      "heading": "Vercel: How Rillet ships 3× faster with AI agents on Vercel",
-      "score": 0.9910122156924484,
+      "heading": "Contoso Models News: Atlas ships computer use in the EU",
+      "score": 1.0,
       "item_ids": [
-        "a302d3532b038ad8"
+        "78b65db7c90e514d"
       ],
       "claims": [
         {
-          "text": "Rillet on Vercel Tripled shipping rate in three months with eve agents deployed on Vercel Two-person team closed 800+ Linear tickets in its first 4 months Builder access via Enterprise Managed Users, SSO, and Directory Sync Ships customer-requested changes to production in as little as two hours Gives every builder access to models through AI Gateway Rillet is an AI-native enterprise resource planning (ERP) platform.",
+          "text": "Contoso Models expanded computer use for Atlas to customers in the European Union.",
           "source_item_ids": [
-            "a302d3532b038ad8"
+            "78b65db7c90e514d"
           ],
           "supported": true,
           "status": "supported",
           "evidence": [
-            "Rillet on Vercel Tripled shipping rate in three months with eve agents deployed on Vercel Two-person team closed 800+ Linear tickets in its first 4 months Builder access via Enterprise Managed Users, SSO, and Directory S"
+            "Contoso Models expanded computer use for Atlas to customers in the European Union. The feature is generally available on the Messages API. Existing US and UK workspaces keep the same tool-calling contract. No pricing cha"
           ],
           "note": null
         }
       ]
     },
     {
-      "heading": "Vercel: Step 5 Preview now available on AI Gateway",
-      "score": 0.9798699669923099,
+      "heading": "Contoso Models News: Legacy Completions API sunset date",
+      "score": 0.9469200669153757,
       "item_ids": [
-        "0c602d42c041f28a",
-        "ed14f6cb11e9aa33",
-        "8c7a62330d646857",
-        "1180a0de48bcee2d",
-        "e17cb9d22d7deb37",
-        "c67fe124970ec377"
+        "555a894eb47f5e41"
       ],
       "claims": [
         {
-          "text": "Step 5 Preview , StepFun's flagship model, is now available on AI Gateway .",
+          "text": "Contoso Models will deprecate the legacy Completions API on 15 January 2027.",
           "source_item_ids": [
-            "0c602d42c041f28a"
+            "555a894eb47f5e41"
           ],
           "supported": true,
           "status": "supported",
           "evidence": [
-            "Step 5 Preview , StepFun's flagship model, is now available on AI Gateway . It's built for agentic coding, professional knowledge work, and financial analysis, from building apps and debugging code to research and analyt"
+            "Contoso Models will deprecate the legacy Completions API on 15 January 2027. Migrate to Messages. This is a breaking API change for remaining Completions callers."
+          ],
+          "note": null
+        }
+      ]
+    },
+    {
+      "heading": "Acme AI News: Acme AI cuts API prices for Helio-7 mini",
+      "score": 0.9459675287084094,
+      "item_ids": [
+        "59c14e5d195d4816",
+        "74fb2505314c97d8"
+      ],
+      "claims": [
+        {
+          "text": "Acme AI announced a 50% price reduction for Helio-7 mini input tokens in the API, effective immediately for all prepaid and monthly billing accounts.",
+          "source_item_ids": [
+            "59c14e5d195d4816"
+          ],
+          "supported": true,
+          "status": "supported",
+          "evidence": [
+            "Acme AI announced a 50% price reduction for Helio-7 mini input tokens in the API, effective immediately for all prepaid and monthly billing accounts."
           ],
           "note": null
         },
         {
-          "text": "Rerank 3 and Rerank 3 Lite from Voyage AI by MongoDB are now available on AI Gateway.",
+          "text": "Acme AI announced a 50% price reduction for Helio-7 mini input tokens in the API.",
           "source_item_ids": [
-            "ed14f6cb11e9aa33"
+            "74fb2505314c97d8"
           ],
           "supported": true,
           "status": "supported",
           "evidence": [
-            "Rerank 3 and Rerank 3 Lite from Voyage AI by MongoDB are now available on AI Gateway. The models reorder search results by relevance before passing documents to a language model. The series improves retrieval quality acr"
-          ],
-          "note": null
-        },
-        {
-          "text": "Ling 3.1 Flash from InclusionAI is now available on AI Gateway.",
-          "source_item_ids": [
-            "8c7a62330d646857"
-          ],
-          "supported": true,
-          "status": "supported",
-          "evidence": [
-            "Ling 3.1 Flash from InclusionAI is now available on AI Gateway. The model is free to use through October 13, 2026. Ling 3.1 Flash is a hybrid reasoning language model with 560B total parameters and 25B active per token. "
+            "Acme AI announced a 50% price reduction for Helio-7 mini input tokens in the API."
           ],
           "note": null
         }
       ]
     },
     {
-      "heading": "GitHub Changelog: Claude Haiku 5.5 in GitHub Copilot",
-      "score": 0.9484544467191786,
+      "heading": "Northwind Agents: northwind 1.2.1",
+      "score": 0.8908509840931875,
       "item_ids": [
-        "5b1fa5bc06454bc6",
-        "02e2d2bdd79692af"
+        "6f38c03e48e4c0ea"
       ],
       "claims": [
         {
-          "text": "Claude Haiku 5.5, Anthropic’s newest lightweight model, is now generally available in GitHub Copilot.",
+          "text": "Security advisory CVE-2026-4242: a vulnerability in the tool-calling sandbox is patched.",
           "source_item_ids": [
-            "5b1fa5bc06454bc6"
+            "6f38c03e48e4c0ea"
           ],
           "supported": true,
           "status": "supported",
           "evidence": [
-            "Claude Haiku 5.5, Anthropic’s newest lightweight model, is now generally available in GitHub Copilot. It is designed for fast, high-volume work like subagents, quick edits, and terminal tasks. In early… The post Claude H"
-          ],
-          "note": null
-        },
-        {
-          "text": "Local sandboxing for GitHub Copilot is now generally available in GitHub Copilot CLI, the GitHub Copilot app, and VS Code sessions using Agent Host.",
-          "source_item_ids": [
-            "02e2d2bdd79692af"
-          ],
-          "supported": true,
-          "status": "supported",
-          "evidence": [
-            "Local sandboxing for GitHub Copilot is now generally available in GitHub Copilot CLI, the GitHub Copilot app, and VS Code sessions using Agent Host. Local sandboxes give developers a secure… The post Local sandboxing for"
+            "FICTIONAL. Security advisory CVE-2026-4242: a vulnerability in the tool-calling sandbox is patched. Upgrade before 1 November 2026."
           ],
           "note": null
         }
       ]
     },
     {
-      "heading": "OpenAI API Changelog: August, 2026",
-      "score": 0.9436997316486109,
+      "heading": "Acme AI News: Introducing Helio-8, now generally available",
+      "score": 0.8812008765230859,
       "item_ids": [
-        "b3489494e34c703c"
+        "94d994df94ae0b06"
       ],
       "claims": [
         {
-          "text": "Mutual TLS (mTLS) and X.509 workload identity federation are now generally available for the OpenAI API.",
+          "text": "Acme AI is launching Helio-8, a new foundation model generally available on the API for all customers.",
           "source_item_ids": [
-            "b3489494e34c703c"
+            "94d994df94ae0b06"
           ],
           "supported": true,
           "status": "supported",
           "evidence": [
-            "Mutual TLS (mTLS) and X.509 workload identity federation are now generally available for the OpenAI API. Configure certificates and X.509 identity providers directly in the Platform console , with access controlled by yo"
+            "Acme AI is launching Helio-8, a new foundation model generally available on the API for all customers. Existing Helio-7 endpoints keep the same tool-calling contract."
           ],
           "note": null
         }
       ]
     },
     {
-      "heading": "Vercel: Agents can now buy domains with the Vercel CLI",
-      "score": 0.9350596401940348,
+      "heading": "Northwind Agents: northwind 1.2.0",
+      "score": 0.7495024762383318,
       "item_ids": [
-        "eff3b30429bfbe6a"
+        "6d96c82ef0d8447d"
       ],
       "claims": [
         {
-          "text": "Your agent can now use the Vercel CLI to buy a domain.",
+          "text": "Northwind Agents 1.2.0 adds a stable tool-calling interface and removes the deprecated DeskRetrievalChain.",
           "source_item_ids": [
-            "eff3b30429bfbe6a"
+            "6d96c82ef0d8447d"
           ],
           "supported": true,
           "status": "supported",
           "evidence": [
-            "Your agent can now use the Vercel CLI to buy a domain. The agent discovers candidates with vercel domains search , checks availability and registrar pricing with vercel domains check and vercel domains price , and initia"
+            "FICTIONAL. Northwind Agents 1.2.0 adds a stable tool-calling interface and removes the deprecated DeskRetrievalChain. This is a breaking API change for users still on the 0.x retrieval helpers."
           ],
           "note": null
         }
       ]
     },
     {
-      "heading": "GitHub Changelog: Copilot code review: New organization billing options and controls",
-      "score": 0.9294406505694852,
+      "heading": "Fabrikam Docs: New docs page: batch",
+      "score": 0.7407924477359868,
       "item_ids": [
-        "62d282624fc56875",
-        "265090b6cbb87804",
-        "4c853c7ff323e5e1"
+        "0e1d76451d5fd24f"
       ],
       "claims": [
         {
-          "text": "This release adds new billing and license controls for Copilot code review admins: Billing: Organization owners can bill Copilot code reviews from members with a Copilot license to the organization’s cost center instead of using up those members’ Copilot quotas.",
+          "text": "New page listed on the Fabrikam Docs sitemap: https://docs.fabrikam.example/atlas-api/docs/batch",
           "source_item_ids": [
-            "62d282624fc56875"
+            "0e1d76451d5fd24f"
           ],
           "supported": true,
           "status": "supported",
           "evidence": [
-            "This release adds new billing and license controls for Copilot code review admins: Billing: Organization owners can bill Copilot code reviews from members with a Copilot license to the organization’s… The post Copilot co"
-          ],
-          "note": null
-        },
-        {
-          "text": "This update brings more control over default models and MCP server in GitHub Copilot for JetBrains.",
-          "source_item_ids": [
-            "265090b6cbb87804"
-          ],
-          "supported": true,
-          "status": "supported",
-          "evidence": [
-            "This update brings more control over default models and MCP server in GitHub Copilot for JetBrains. It also makes diagnostics easier to address, improves chat navigation and account controls, and… The post New controls a"
-          ],
-          "note": null
-        },
-        {
-          "text": "This week’s updates make Copilot easier to use across accounts and environments, with more control over what agents can access and how you manage their work.",
-          "source_item_ids": [
-            "4c853c7ff323e5e1"
-          ],
-          "supported": true,
-          "status": "supported",
-          "evidence": [
-            "This week’s updates make Copilot easier to use across accounts and environments, with more control over what agents can access and how you manage their work. GitHub Copilot Claude Haiku… The post GitHub Copilot weekly re"
+            "New page: https://docs.fabrikam.example/atlas-api/docs/batch"
           ],
           "note": null
         }
       ]
     },
     {
-      "heading": "Cloudflare Blog: Introducing Clef-omni with full multimodality, plus a faster Clef and a cheaper Clef-flash",
-      "score": 0.9032035115781242,
+      "heading": "Acme AI News: New fine-tuning recipes for structured outputs",
+      "score": 0.6982781996863321,
       "item_ids": [
-        "1513b5868d537bcc"
+        "b5dfa8982f4e0a7d"
       ],
       "claims": [
         {
-          "text": "Following last week’s release of Clef and Clef-flash , Cloudflare’s open-weight decision models, we decided to bring forth more gifts.",
+          "text": "The API now ships official fine-tuning recipes for structured outputs so teams can keep JSON schemas stable across model upgrades.",
           "source_item_ids": [
-            "1513b5868d537bcc"
+            "b5dfa8982f4e0a7d"
           ],
           "supported": true,
           "status": "supported",
           "evidence": [
-            "We are expanding the Clef decision model family with Clef-omni, natively processing audio, video, images, and text in a single pipeline. We’ve also lowered Clef-flash pricing and boosted Clef inference speeds by up to 2."
-          ],
-          "note": null
-        }
-      ]
-    },
-    {
-      "heading": "Pinecone Release Notes: ​ Cohere Rerank 4.0 Fast is generally available, and cohere-rerank-3.5 is deprecated",
-      "score": 0.9031224497107211,
-      "item_ids": [
-        "d7282f8c1d55e35a"
-      ],
-      "claims": [
-        {
-          "text": "Through August 30, 2026 : cohere-rerank-3.5 continues to serve requests as before.",
-          "source_item_ids": [
-            "d7282f8c1d55e35a"
-          ],
-          "supported": true,
-          "status": "supported",
-          "evidence": [
-            "Through August 30, 2026 : cohere-rerank-3.5 continues to serve requests as before. August 31, 2026 : requests to cohere-rerank-3.5 are automatically served by cohere-rerank-4-fast . Relevance scores differ. cohere-rerank"
-          ],
-          "note": null
-        }
-      ]
-    },
-    {
-      "heading": "Gemini API Changelog: August 13, 2026",
-      "score": 0.9013100529905999,
-      "item_ids": [
-        "af8512a35352b183",
-        "d4c1e26fb5fc370c",
-        "0c1a28f71db846ef"
-      ],
-      "claims": [
-        {
-          "text": "Gemini 3.7 Flash generally available (GA) : Released our most intelligent workhorse model yet for coding and agents: Gemini 3.7 Flash ( gemini-3.7-flash ): Substantial improvements across software engineering, web development, and agentic workflows, available at an introductory price through December 31, 2026.",
-          "source_item_ids": [
-            "af8512a35352b183"
-          ],
-          "supported": true,
-          "status": "supported",
-          "evidence": [
-            "Gemini 3.7 Flash generally available (GA) : Released our most intelligent workhorse model yet for coding and agents: Gemini 3.7 Flash ( gemini-3.7-flash ): Substantial improvements across software engineering, web develo"
-          ],
-          "note": null
-        },
-        {
-          "text": "Gemini 3.8 Flash generally available (GA) : Released gemini-3.8-flash , our most intelligent Flash model, engineered for long-horizon software engineering, autonomous agents, and complex enterprise workflows.",
-          "source_item_ids": [
-            "d4c1e26fb5fc370c"
-          ],
-          "supported": true,
-          "status": "supported",
-          "evidence": [
-            "Gemini 3.8 Flash generally available (GA) : Released gemini-3.8-flash , our most intelligent Flash model, engineered for long-horizon software engineering, autonomous agents, and complex enterprise workflows. To get star"
-          ],
-          "note": null
-        },
-        {
-          "text": "Agentic video understanding : Released agentic video understanding for Gemini 3.7 Flash, 3.6 Flash, and 3.5 Flash-Lite across the Interactions and GenerateContent APIs.",
-          "source_item_ids": [
-            "0c1a28f71db846ef"
-          ],
-          "supported": true,
-          "status": "supported",
-          "evidence": [
-            "Agentic video understanding : Released agentic video understanding for Gemini 3.7 Flash, 3.6 Flash, and 3.5 Flash-Lite across the Interactions and GenerateContent APIs. The model dynamically navigates video timelines, re"
-          ],
-          "note": null
-        }
-      ]
-    },
-    {
-      "heading": "Gemini API Changelog: July 21, 2026",
-      "score": 0.8990626472910298,
-      "item_ids": [
-        "d7b2eb2913d84b57"
-      ],
-      "claims": [
-        {
-          "text": "Gemini 3.6 Flash and Gemini 3.5 Flash-Lite generally available (GA) : Released stable, production-ready versions of our latest 3.x Flash models: Gemini 3.6 Flash ( gemini-3.6-flash ): Features improved token efficiency and code/agentic planning capabilities at a lower price point than 3.5 Flash, resolving developer feedback around output verbosity.",
-          "source_item_ids": [
-            "d7b2eb2913d84b57"
-          ],
-          "supported": true,
-          "status": "supported",
-          "evidence": [
-            "Gemini 3.6 Flash and Gemini 3.5 Flash-Lite generally available (GA) : Released stable, production-ready versions of our latest 3.x Flash models: Gemini 3.6 Flash ( gemini-3.6-flash ): Features improved token efficiency a"
-          ],
-          "note": null
-        }
-      ]
-    },
-    {
-      "heading": "Vercel: AI Gateway adds Browserbase Search and Fetch tools",
-      "score": 0.894770224309237,
-      "item_ids": [
-        "16a6a5a3ee020205",
-        "729f8110f53ebcab",
-        "671afb38b789ebc3",
-        "fd7708c76500b5ff"
-      ],
-      "claims": [
-        {
-          "text": "Browserbase Search and Fetch are now available through AI Gateway .",
-          "source_item_ids": [
-            "16a6a5a3ee020205"
-          ],
-          "supported": true,
-          "status": "supported",
-          "evidence": [
-            "Browserbase Search and Fetch are now available through AI Gateway . Give your models access to current information, find relevant pages, and retrieve their contents, alongside Browserbase's existing AI SDK and Vercel Mar"
-          ],
-          "note": null
-        },
-        {
-          "text": "Grok Imagine Video 1.5 Lite from xAI is now available on AI Gateway.",
-          "source_item_ids": [
-            "729f8110f53ebcab"
-          ],
-          "supported": true,
-          "status": "supported",
-          "evidence": [
-            "Grok Imagine Video 1.5 Lite from xAI is now available on AI Gateway. This lightweight model turns text prompts and images into video with native audio. The model produces clips from 1 to 15 seconds long in 480p, 720p, an"
-          ],
-          "note": null
-        },
-        {
-          "text": "Nano Banana 2.1 from Google is now available on AI Gateway as google/gemini-nano-banana-2.1 .",
-          "source_item_ids": [
-            "671afb38b789ebc3"
-          ],
-          "supported": true,
-          "status": "supported",
-          "evidence": [
-            "Nano Banana 2.1 from Google is now available on AI Gateway as google/gemini-nano-banana-2.1 . Compared with earlier Nano Banana models, it improves image generation and editing, including product recontextualization, mas"
-          ],
-          "note": null
-        }
-      ]
-    },
-    {
-      "heading": "Pinecone Release Notes: ​ Released Python SDK v10.0.0",
-      "score": 0.8913768919301956,
-      "item_ids": [
-        "0a23b2012e667b17"
-      ],
-      "claims": [
-        {
-          "text": "pinecone.preview is removed.",
-          "source_item_ids": [
-            "0a23b2012e667b17"
-          ],
-          "supported": true,
-          "status": "supported",
-          "evidence": [
-            "pinecone.preview is removed. Use pc.indexes and pc.index(...) on the main client, and import SchemaBuilder from pinecone . AsyncPinecone.index() is now a coroutine, so it needs an await . IndexModel is built from schema "
+            "The API now ships official fine-tuning recipes for structured outputs so teams can keep JSON schemas stable across model upgrades."
           ],
           "note": null
         }
@@ -381,265 +189,107 @@
     }
   ],
   "coverage": {
-    "total_claims": 21,
-    "supported": 21,
+    "total_claims": 9,
+    "supported": 9,
     "flagged": 0,
     "dropped": 0,
     "coverage_ratio": 1.0
   },
   "selected_item_ids": [
-    "a302d3532b038ad8",
-    "0c602d42c041f28a",
-    "ed14f6cb11e9aa33",
-    "8c7a62330d646857",
-    "1180a0de48bcee2d",
-    "e17cb9d22d7deb37",
-    "c67fe124970ec377",
-    "5b1fa5bc06454bc6",
-    "02e2d2bdd79692af",
-    "b3489494e34c703c",
-    "eff3b30429bfbe6a",
-    "62d282624fc56875",
-    "265090b6cbb87804",
-    "4c853c7ff323e5e1",
-    "1513b5868d537bcc",
-    "d7282f8c1d55e35a",
-    "af8512a35352b183",
-    "d4c1e26fb5fc370c",
-    "0c1a28f71db846ef",
-    "d7b2eb2913d84b57",
-    "16a6a5a3ee020205",
-    "729f8110f53ebcab",
-    "671afb38b789ebc3",
-    "fd7708c76500b5ff",
-    "0a23b2012e667b17"
+    "78b65db7c90e514d",
+    "555a894eb47f5e41",
+    "59c14e5d195d4816",
+    "74fb2505314c97d8",
+    "6f38c03e48e4c0ea",
+    "94d994df94ae0b06",
+    "6d96c82ef0d8447d",
+    "0e1d76451d5fd24f",
+    "b5dfa8982f4e0a7d"
   ],
-  "notes": [],
+  "notes": [
+    "Sample briefing generated from fictional fixtures; companies and products are invented."
+  ],
   "sources": [
     {
-      "id": "a302d3532b038ad8",
-      "source_id": "vercel",
-      "source_name": "Vercel",
-      "url": "https://vercel.com/blog/how-rillet-ships-3-faster-with-ai-agents-on-vercel",
-      "title": "How Rillet ships 3× faster with AI agents on Vercel",
-      "kind": "security",
-      "score": 0.9510122156924484
-    },
-    {
-      "id": "0c602d42c041f28a",
-      "source_id": "vercel",
-      "source_name": "Vercel",
-      "url": "https://vercel.com/changelog/step-5-preview-now-available-on-ai-gateway",
-      "title": "Step 5 Preview now available on AI Gateway",
+      "id": "78b65db7c90e514d",
+      "source_id": "contoso-news",
+      "source_name": "Contoso Models News",
+      "url": "https://contoso.example/news#atlas-ships-computer-use",
+      "title": "Atlas ships computer use in the EU",
       "kind": "pricing_change",
-      "score": 0.9098401371506049
+      "score": 0.9897517619207631
     },
     {
-      "id": "ed14f6cb11e9aa33",
-      "source_id": "vercel",
-      "source_name": "Vercel",
-      "url": "https://vercel.com/changelog/voyage-rerank-3-and-rerank-3-lite-are-now-available-on-ai-gateway",
-      "title": "Voyage Rerank 3 and Rerank 3 Lite are now available on AI Gateway",
-      "kind": "pricing_change",
-      "score": 0.7908247893419582
-    },
-    {
-      "id": "8c7a62330d646857",
-      "source_id": "vercel",
-      "source_name": "Vercel",
-      "url": "https://vercel.com/changelog/ling-3-1-flash-is-now-available-on-ai-gateway",
-      "title": "Ling 3.1 Flash is now available on AI Gateway",
-      "kind": "pricing_change",
-      "score": 0.7845269597437332
-    },
-    {
-      "id": "1180a0de48bcee2d",
-      "source_id": "vercel",
-      "source_name": "Vercel",
-      "url": "https://vercel.com/changelog/claude-haiku-5-5-now-available-on-ai-gateway",
-      "title": "Claude Haiku 5.5 now available on AI Gateway",
-      "kind": "model_release",
-      "score": 0.7500387766313641
-    },
-    {
-      "id": "e17cb9d22d7deb37",
-      "source_id": "vercel",
-      "source_name": "Vercel",
-      "url": "https://vercel.com/changelog/mistral-large-4-now-available-on-ai-gateway",
-      "title": "Mistral Large 4 now available on AI Gateway",
-      "kind": "model_release",
-      "score": 0.7283283830938709
-    },
-    {
-      "id": "c67fe124970ec377",
-      "source_id": "vercel",
-      "source_name": "Vercel",
-      "url": "https://vercel.com/changelog/claude-sonnet-5-5-now-available-on-ai-gateway",
-      "title": "Claude Sonnet 5.5 now available on AI Gateway",
-      "kind": "model_release",
-      "score": 0.6501944361301161
-    },
-    {
-      "id": "5b1fa5bc06454bc6",
-      "source_id": "github-changelog",
-      "source_name": "GitHub Changelog",
-      "url": "https://github.blog/changelog/2026-10-07-claude-haiku-5-5-in-github-copilot",
-      "title": "Claude Haiku 5.5 in GitHub Copilot",
-      "kind": "pricing_change",
-      "score": 0.8990382714828405
-    },
-    {
-      "id": "02e2d2bdd79692af",
-      "source_id": "github-changelog",
-      "source_name": "GitHub Changelog",
-      "url": "https://github.blog/changelog/2026-10-07-local-sandboxing-for-github-copilot-now-generally-available",
-      "title": "Local sandboxing for GitHub Copilot now generally available",
-      "kind": "launch",
-      "score": 0.8058227728661195
-    },
-    {
-      "id": "b3489494e34c703c",
-      "source_id": "openai-api",
-      "source_name": "OpenAI API Changelog",
-      "url": "https://developers.openai.com/api/docs/guides/mutual-tls",
-      "title": "August, 2026",
-      "kind": "pricing_change",
-      "score": 0.9036997316486108
-    },
-    {
-      "id": "eff3b30429bfbe6a",
-      "source_id": "vercel",
-      "source_name": "Vercel",
-      "url": "https://vercel.com/changelog/agents-can-now-buy-domains-with-the-vercel-cli",
-      "title": "Agents can now buy domains with the Vercel CLI",
-      "kind": "pricing_change",
-      "score": 0.8950596401940347
-    },
-    {
-      "id": "62d282624fc56875",
-      "source_id": "github-changelog",
-      "source_name": "GitHub Changelog",
-      "url": "https://github.blog/changelog/2026-10-08-copilot-code-review-new-organization-billing-options-and-controls",
-      "title": "Copilot code review: New organization billing options and controls",
-      "kind": "pricing_change",
-      "score": 0.8587590250702261
-    },
-    {
-      "id": "265090b6cbb87804",
-      "source_id": "github-changelog",
-      "source_name": "GitHub Changelog",
-      "url": "https://github.blog/changelog/2026-10-10-new-controls-and-chat-improvements-in-copilot-for-jetbrains",
-      "title": "New controls and chat improvements in Copilot for JetBrains",
-      "kind": "model_release",
-      "score": 0.8274194114970914
-    },
-    {
-      "id": "4c853c7ff323e5e1",
-      "source_id": "github-changelog",
-      "source_name": "GitHub Changelog",
-      "url": "https://github.blog/changelog/2026-10-09-github-copilot-weekly-releases-october-5",
-      "title": "GitHub Copilot weekly releases — October 5",
-      "kind": "model_release",
-      "score": 0.7969148936359531
-    },
-    {
-      "id": "1513b5868d537bcc",
-      "source_id": "cloudflare",
-      "source_name": "Cloudflare Blog",
-      "url": "https://blog.cloudflare.com/clef-faster-cheaper-multimodal",
-      "title": "Introducing Clef-omni with full multimodality, plus a faster Clef and a cheaper Clef-flash",
-      "kind": "pricing_change",
-      "score": 0.8632035115781241
-    },
-    {
-      "id": "d7282f8c1d55e35a",
-      "source_id": "pinecone",
-      "source_name": "Pinecone Release Notes",
-      "url": "https://docs.pinecone.io/release-notes/2026#cohere-rerank-4-0-fast-is-generally-available-and-cohere-rerank-3-5-is-deprecated",
-      "title": "​ Cohere Rerank 4.0 Fast is generally available, and cohere-rerank-3.5 is deprecated",
-      "kind": "pricing_change",
-      "score": 0.863122449710721
-    },
-    {
-      "id": "af8512a35352b183",
-      "source_id": "gemini-api",
-      "source_name": "Gemini API Changelog",
-      "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.7-flash",
-      "title": "August 13, 2026",
-      "kind": "pricing_change",
-      "score": 0.8523506376085056
-    },
-    {
-      "id": "d4c1e26fb5fc370c",
-      "source_id": "gemini-api",
-      "source_name": "Gemini API Changelog",
-      "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash",
-      "title": "September 2, 2026",
-      "kind": "model_release",
-      "score": 0.6978874742084137
-    },
-    {
-      "id": "0c1a28f71db846ef",
-      "source_id": "gemini-api",
-      "source_name": "Gemini API Changelog",
-      "url": "https://ai.google.dev/gemini-api/docs/video-understanding#agentic-video-understanding",
-      "title": "September 1, 2026",
-      "kind": "model_release",
-      "score": 0.6964079548295415
-    },
-    {
-      "id": "d7b2eb2913d84b57",
-      "source_id": "gemini-api",
-      "source_name": "Gemini API Changelog",
-      "url": "https://ai.google.dev/gemini-api/docs/latest-model",
-      "title": "July 21, 2026",
-      "kind": "pricing_change",
-      "score": 0.8590626472910298
-    },
-    {
-      "id": "16a6a5a3ee020205",
-      "source_id": "vercel",
-      "source_name": "Vercel",
-      "url": "https://vercel.com/changelog/ai-gateway-adds-browserbase-search-and-fetch-tools",
-      "title": "AI Gateway adds Browserbase Search and Fetch tools",
-      "kind": "pricing_change",
-      "score": 0.8143411459641643
-    },
-    {
-      "id": "729f8110f53ebcab",
-      "source_id": "vercel",
-      "source_name": "Vercel",
-      "url": "https://vercel.com/changelog/grok-imagine-video-1-5-lite-on-ai-gateway",
-      "title": "Grok Imagine Video 1.5 Lite on AI Gateway",
-      "kind": "model_release",
-      "score": 0.7663768471174837
-    },
-    {
-      "id": "671afb38b789ebc3",
-      "source_id": "vercel",
-      "source_name": "Vercel",
-      "url": "https://vercel.com/changelog/nano-banana-2-1-now-available-on-ai-gateway",
-      "title": "Nano Banana 2.1 now available on AI Gateway",
-      "kind": "model_release",
-      "score": 0.7572844925040152
-    },
-    {
-      "id": "fd7708c76500b5ff",
-      "source_id": "vercel",
-      "source_name": "Vercel",
-      "url": "https://vercel.com/changelog/flux-3-image-now-available-on-ai-gateway",
-      "title": "FLUX 3 Image now available on AI Gateway",
-      "kind": "launch",
-      "score": 0.7533881589320376
-    },
-    {
-      "id": "0a23b2012e667b17",
-      "source_id": "pinecone",
-      "source_name": "Pinecone Release Notes",
-      "url": "https://docs.pinecone.io/release-notes/2026#released-python-sdk-v10-0-0",
-      "title": "​ Released Python SDK v10.0.0",
+      "id": "555a894eb47f5e41",
+      "source_id": "contoso-news",
+      "source_name": "Contoso Models News",
+      "url": "https://contoso.example/news#legacy-completions-api-sunset-date",
+      "title": "Legacy Completions API sunset date",
       "kind": "deprecation",
-      "score": 0.8513768919301956
+      "score": 0.9069200669153756
+    },
+    {
+      "id": "59c14e5d195d4816",
+      "source_id": "acme-news",
+      "source_name": "Acme AI News",
+      "url": "https://acme.example/index/helio-7-mini-price-cut",
+      "title": "Acme AI cuts API prices for Helio-7 mini",
+      "kind": "pricing_change",
+      "score": 0.8856054446034218
+    },
+    {
+      "id": "74fb2505314c97d8",
+      "source_id": "mirror",
+      "source_name": "Mirror",
+      "url": "https://mirror.example/acme-price-cut",
+      "title": "Acme AI reduces Helio-7 mini API pricing by 50%",
+      "kind": "pricing_change",
+      "score": 0.8653626717776977
+    },
+    {
+      "id": "6f38c03e48e4c0ea",
+      "source_id": "northwind",
+      "source_name": "Northwind Agents",
+      "url": "https://github.com/example/northwind/releases/tag/v1.2.1",
+      "title": "northwind 1.2.1",
+      "kind": "security",
+      "score": 0.8508509840931875
+    },
+    {
+      "id": "94d994df94ae0b06",
+      "source_id": "acme-news",
+      "source_name": "Acme AI News",
+      "url": "https://acme.example/index/helio-8-ga",
+      "title": "Introducing Helio-8, now generally available",
+      "kind": "model_release",
+      "score": 0.8412008765230858
+    },
+    {
+      "id": "6d96c82ef0d8447d",
+      "source_id": "northwind",
+      "source_name": "Northwind Agents",
+      "url": "https://github.com/example/northwind/releases/tag/v1.2.0",
+      "title": "northwind 1.2.0",
+      "kind": "api_change",
+      "score": 0.7095024762383317
+    },
+    {
+      "id": "0e1d76451d5fd24f",
+      "source_id": "fabrikam-docs",
+      "source_name": "Fabrikam Docs",
+      "url": "https://docs.fabrikam.example/atlas-api/docs/batch",
+      "title": "New docs page: batch",
+      "kind": "api_change",
+      "score": 0.7007924477359868
+    },
+    {
+      "id": "b5dfa8982f4e0a7d",
+      "source_id": "acme-news",
+      "source_name": "Acme AI News",
+      "url": "https://acme.example/index/structured-outputs-recipes",
+      "title": "New fine-tuning recipes for structured outputs",
+      "kind": "api_change",
+      "score": 0.658278199686332
     }
   ]
 }

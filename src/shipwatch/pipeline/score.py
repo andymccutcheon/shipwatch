@@ -19,6 +19,7 @@ IMPACT = {
     ItemKind.API_CHANGE: 0.62,
     ItemKind.AVAILABILITY: 0.58,
     ItemKind.OTHER: 0.32,
+    ItemKind.NON_SHIPMENT: 0.10,
 }
 
 _IMPACT_WORDS = (
@@ -52,12 +53,14 @@ def score_items(items: list[Item], settings: ScoringSettings, *, now: datetime) 
         breadth = _breadth(item)
         recency = _recency(item, settings, now)
         boost = _boost(item, settings)
+        penalty = _penalty(item, settings)
         raw = (
             settings.novelty * novelty
             + settings.impact * impact
             + settings.breadth * breadth
             + settings.recency * recency
             + boost
+            - penalty
         )
         item.score = max(0.0, min(1.0, raw))
         item.score_breakdown = {
@@ -66,6 +69,7 @@ def score_items(items: list[Item], settings: ScoringSettings, *, now: datetime) 
             "breadth": round(breadth, 4),
             "recency": round(recency, 4),
             "boost": round(boost, 4),
+            "penalty": round(penalty, 4),
         }
     return items
 
@@ -134,10 +138,18 @@ def _recency(item: Item, settings: ScoringSettings, now: datetime) -> float:
 
 
 def _boost(item: Item, settings: ScoringSettings) -> float:
+    if item.kind is ItemKind.NON_SHIPMENT:
+        return 0.0
     if item.kind is ItemKind.PRICING_CHANGE:
         return settings.pricing_boost
     if item.kind is ItemKind.DEPRECATION:
         return settings.deprecation_boost
     if item.kind is ItemKind.SECURITY:
         return settings.security_boost
+    return 0.0
+
+
+def _penalty(item: Item, settings: ScoringSettings) -> float:
+    if item.kind is ItemKind.NON_SHIPMENT:
+        return max(0.0, settings.non_shipment_penalty)
     return 0.0

@@ -95,9 +95,51 @@ def jaccard(a: set[str], b: set[str]) -> float:
     return inter / union if union else 0.0
 
 
+_SENT_END = re.compile(r"(?<=[.!?])\s+")
+# Marketing pages often glue card titles together without periods:
+# "…on Atlas Two-person team closed 800+ tickets…"
+_MASHED = re.compile(
+    r"(?<=[a-z0-9)])\s+(?=[A-Z][\w'-]+(?:-[A-Za-z0-9]+)?(?:\s+[A-Z][\w'-]+){0,2}\s+[a-z])"
+)
+MAX_CLAIM_CHARS = 220
+
+
 def sentence_split(text: str) -> list[str]:
-    chunks = re.split(r"(?<=[.!?])\s+|\n+", collapse_ws(text))
-    return [c.strip(" -•\t") for c in chunks if len(c.strip()) >= 20]
+    """Split on paragraphs and punctuation; un-mash glued marketing cards."""
+    paragraphs = [collapse_ws(p) for p in re.split(r"\n+", text or "") if collapse_ws(p)]
+    if not paragraphs and text:
+        paragraphs = [collapse_ws(text)]
+    out: list[str] = []
+    seen: set[str] = set()
+    for para in paragraphs:
+        for chunk in _SENT_END.split(para):
+            pieces = _MASHED.split(chunk) if len(chunk) > 160 else [chunk]
+            for piece in pieces:
+                cleaned = piece.strip(" -•\t")
+                if len(cleaned) < 20:
+                    continue
+                key = cleaned.lower()
+                if key in seen:
+                    continue
+                seen.add(key)
+                out.append(cleaned)
+    return out
+
+
+def clean_claim(text: str) -> str:
+    """One extractive sentence, not a mashed card dump."""
+    candidates = sentence_split(text)
+    if not candidates:
+        fallback = collapse_ws(text)
+        return fallback[:MAX_CLAIM_CHARS].rstrip()
+    for sentence in candidates:
+        if 24 <= len(sentence) <= MAX_CLAIM_CHARS:
+            return sentence
+    first = candidates[0]
+    if len(first) <= MAX_CLAIM_CHARS:
+        return first
+    clipped = first[:MAX_CLAIM_CHARS].rsplit(" ", 1)[0].rstrip(" ,;:")
+    return clipped or first[:MAX_CLAIM_CHARS]
 
 
 def slug(text: str, *, limit: int = 48) -> str:

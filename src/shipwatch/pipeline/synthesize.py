@@ -6,7 +6,7 @@ from datetime import datetime
 
 from shipwatch.dates import format_window, now_utc
 from shipwatch.models import Briefing, BriefingSection, Claim, Cluster, Fact, Item
-from shipwatch.textutil import sentence_split, sha16
+from shipwatch.textutil import clean_claim, sentence_split, sha16
 
 
 def synthesize_extractive(
@@ -130,11 +130,12 @@ def cited_from(claims: list[Claim]) -> list[str]:
 
 def _extractive_claim(item: Item, facts: list[Fact]) -> str:
     if facts:
-        return facts[0].text
-    sentences = sentence_split(item.content or item.summary)
+        return clean_claim(facts[0].text)
+    blob = item.content or item.summary or item.title
+    sentences = sentence_split(blob)
     if sentences:
-        return sentences[0]
-    return item.title
+        return clean_claim(sentences[0])
+    return clean_claim(item.title)
 
 
 def _heading(cluster: Cluster, members: list[Item]) -> str:

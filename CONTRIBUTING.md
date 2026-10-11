@@ -40,6 +40,9 @@ format, then pytest. No live fetches.
   Persistence belongs in `shipwatch.storage`.
 - Prefer a recorded fixture over hitting the network.
 - Config is env vars + YAML. Do not add an external service.
+- After changing scoring, extractive text, or fixtures, regenerate the
+  sample briefing: `python examples/generate_sample_briefing.py`.
+
 
 ## Releasing
 
