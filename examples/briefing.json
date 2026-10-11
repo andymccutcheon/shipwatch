@@ -1,0 +1,208 @@
+{
+  "id": "2cba4f243a73a59a",
+  "title": "Shipwatch briefing — 27 Sep 2026 – 11 Oct 2026",
+  "generated_at": "2026-10-11T12:00:00Z",
+  "since": "14d",
+  "window_start": "2026-09-27T12:00:00Z",
+  "mode": "heuristic",
+  "sections": [
+    {
+      "heading": "Anthropic News: Claude ships computer use in the EU",
+      "score": 1.0,
+      "item_ids": [
+        "282424f2ad08afae"
+      ],
+      "claims": [
+        {
+          "text": "Anthropic expanded computer use for Claude to customers in the European Union.",
+          "source_item_ids": [
+            "282424f2ad08afae"
+          ],
+          "supported": true,
+          "status": "supported",
+          "evidence": [
+            "Anthropic expanded computer use for Claude to customers in the European Union. The feature is generally available on the Messages API. Existing US and UK workspaces keep the same tool-calling contract. No pricing change."
+          ],
+          "note": null
+        }
+      ]
+    },
+    {
+      "heading": "OpenAI News: OpenAI cuts API prices for GPT-5 mini",
+      "score": 0.9589623307728079,
+      "item_ids": [
+        "05f5e961da87af99"
+      ],
+      "claims": [
+        {
+          "text": "OpenAI announced a 50% price reduction for GPT-5 mini input tokens in the API, effective immediately for all prepaid and monthly billing accounts.",
+          "source_item_ids": [
+            "05f5e961da87af99"
+          ],
+          "supported": true,
+          "status": "supported",
+          "evidence": [
+            "OpenAI announced a 50% price reduction for GPT-5 mini input tokens in the API, effective immediately for all prepaid and monthly billing accounts."
+          ],
+          "note": null
+        }
+      ]
+    },
+    {
+      "heading": "Anthropic News: Legacy Completions API sunset date",
+      "score": 0.9486142481936561,
+      "item_ids": [
+        "8ccdce0dd40b6453"
+      ],
+      "claims": [
+        {
+          "text": "Anthropic will deprecate the legacy Completions API on 15 January 2027.",
+          "source_item_ids": [
+            "8ccdce0dd40b6453"
+          ],
+          "supported": true,
+          "status": "supported",
+          "evidence": [
+            "Anthropic will deprecate the legacy Completions API on 15 January 2027. Migrate to Messages. This is a breaking API change for remaining Completions callers."
+          ],
+          "note": null
+        }
+      ]
+    },
+    {
+      "heading": "Gemini docs: New docs page: batch",
+      "score": 0.8477432053117444,
+      "item_ids": [
+        "0e5383603b259e2b"
+      ],
+      "claims": [
+        {
+          "text": "New page listed on the Gemini docs sitemap: https://ai.example/gemini-api/docs/batch",
+          "source_item_ids": [
+            "0e5383603b259e2b"
+          ],
+          "supported": true,
+          "status": "supported",
+          "evidence": [
+            "New page: https://ai.example/gemini-api/docs/batch"
+          ],
+          "note": null
+        }
+      ]
+    },
+    {
+      "heading": "LangChain: langchain 1.2.0",
+      "score": 0.760505435818573,
+      "item_ids": [
+        "7e2c86311edb3f4e"
+      ],
+      "claims": [
+        {
+          "text": "LangChain 1.2.0 adds a stable tool-calling interface and removes the deprecated ConversationalRetrievalChain.",
+          "source_item_ids": [
+            "7e2c86311edb3f4e"
+          ],
+          "supported": true,
+          "status": "supported",
+          "evidence": [
+            "LangChain 1.2.0 adds a stable tool-calling interface and removes the deprecated ConversationalRetrievalChain. This is a breaking API change for users still on the 0.x retrieval helpers."
+          ],
+          "note": null
+        }
+      ]
+    },
+    {
+      "heading": "OpenAI News: New fine-tuning recipes for structured outputs",
+      "score": 0.7003004352632551,
+      "item_ids": [
+        "2be7c91ef453a958"
+      ],
+      "claims": [
+        {
+          "text": "The API now ships official fine-tuning recipes for structured outputs so teams can keep JSON schemas stable across model upgrades.",
+          "source_item_ids": [
+            "2be7c91ef453a958"
+          ],
+          "supported": true,
+          "status": "supported",
+          "evidence": [
+            "The API now ships official fine-tuning recipes for structured outputs so teams can keep JSON schemas stable across model upgrades."
+          ],
+          "note": null
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "total_claims": 6,
+    "supported": 6,
+    "flagged": 0,
+    "dropped": 0,
+    "coverage_ratio": 1.0
+  },
+  "selected_item_ids": [
+    "282424f2ad08afae",
+    "05f5e961da87af99",
+    "8ccdce0dd40b6453",
+    "0e5383603b259e2b",
+    "7e2c86311edb3f4e",
+    "2be7c91ef453a958"
+  ],
+  "notes": [],
+  "sources": [
+    {
+      "id": "282424f2ad08afae",
+      "source_id": "anthropic-news",
+      "source_name": "Anthropic News",
+      "url": "https://anthropic.example/news#claude-ships-computer-use",
+      "title": "Claude ships computer use in the EU",
+      "kind": "pricing_change",
+      "score": 1.0
+    },
+    {
+      "id": "05f5e961da87af99",
+      "source_id": "openai-news",
+      "source_name": "OpenAI News",
+      "url": "https://openai.example/index/gpt-5-mini-price-cut",
+      "title": "OpenAI cuts API prices for GPT-5 mini",
+      "kind": "pricing_change",
+      "score": 0.918962330772808
+    },
+    {
+      "id": "8ccdce0dd40b6453",
+      "source_id": "anthropic-news",
+      "source_name": "Anthropic News",
+      "url": "https://anthropic.example/news#legacy-completions-api-sunset-date",
+      "title": "Legacy Completions API sunset date",
+      "kind": "deprecation",
+      "score": 0.9086142481936561
+    },
+    {
+      "id": "0e5383603b259e2b",
+      "source_id": "gemini-docs",
+      "source_name": "Gemini docs",
+      "url": "https://ai.example/gemini-api/docs/batch",
+      "title": "New docs page: batch",
+      "kind": "model_release",
+      "score": 0.8077432053117445
+    },
+    {
+      "id": "7e2c86311edb3f4e",
+      "source_id": "langchain",
+      "source_name": "LangChain",
+      "url": "https://github.com/langchain-ai/langchain/releases/tag/v1.2.0",
+      "title": "langchain 1.2.0",
+      "kind": "api_change",
+      "score": 0.720505435818573
+    },
+    {
+      "id": "2be7c91ef453a958",
+      "source_id": "openai-news",
+      "source_name": "OpenAI News",
+      "url": "https://openai.example/index/structured-outputs-recipes",
+      "title": "New fine-tuning recipes for structured outputs",
+      "kind": "api_change",
+      "score": 0.6603004352632551
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Mirror</title>
+    <item>
+      <title>OpenAI reduces GPT-5 mini API pricing by 50%</title>
+      <link>https://mirror.example/openai-price-cut</link>
+      <pubDate>Wed, 08 Oct 2026 16:00:00 GMT</pubDate>
+      <description>OpenAI announced a 50% price reduction for GPT-5 mini input tokens in the API.</description>
+    </item>
+  </channel>
+</rss>

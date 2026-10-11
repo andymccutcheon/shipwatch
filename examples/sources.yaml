@@ -1,0 +1,172 @@
+# Sample source pack (~26 well-known AI and developer-tool changelogs).
+# URLs were fetched successfully on 2026-10-11 with the shipwatch user agent.
+# Prefer RSS/Atom and GitHub Releases; HTML pages are a fallback and may be
+# thin when a site is client-rendered.
+#
+# Edit freely. Disable a row with enabled: false.
+
+sources:
+  - id: openai-news
+    name: OpenAI News
+    kind: rss
+    url: https://openai.com/news/rss.xml
+    tags: [openai, models]
+
+  - id: openai-api
+    name: OpenAI API Changelog
+    kind: html
+    url: https://developers.openai.com/api/docs/changelog
+    tags: [openai, api]
+
+  - id: anthropic-news
+    name: Anthropic News
+    kind: html
+    url: https://www.anthropic.com/news
+    tags: [anthropic, models]
+
+  - id: anthropic-release-notes
+    name: Anthropic Release Notes
+    kind: html
+    url: https://docs.anthropic.com/en/release-notes/overview
+    tags: [anthropic, api]
+    notes: Redirects to platform.claude.com as of 2026-10-11.
+
+  - id: google-ai-blog
+    name: Google AI Blog
+    kind: rss
+    url: https://blog.google/technology/ai/rss/
+    tags: [google, gemini]
+
+  - id: gemini-api
+    name: Gemini API Changelog
+    kind: html
+    url: https://ai.google.dev/gemini-api/docs/changelog
+    tags: [google, api]
+
+  - id: gemini-docs-sitemap
+    name: Gemini docs (new pages)
+    kind: sitemap
+    url: https://ai.google.dev/sitemap.xml
+    tags: [google, docs]
+    notes: Optional new-page detector. High volume; disable if noisy.
+
+  - id: mistral-news
+    name: Mistral News
+    kind: rss
+    url: https://mistral.ai/news/rss
+    tags: [mistral, models]
+
+  - id: cursor
+    name: Cursor Changelog
+    kind: html
+    url: https://cursor.com/changelog
+    tags: [cursor, editor]
+    notes: Marketing changelog; may be JS-rendered.
+
+  - id: vercel
+    name: Vercel
+    kind: rss
+    url: https://vercel.com/atom
+    tags: [vercel, platform]
+
+  - id: huggingface
+    name: Hugging Face Blog
+    kind: rss
+    url: https://huggingface.co/blog/feed.xml
+    tags: [huggingface, models]
+
+  - id: langchain
+    name: LangChain
+    kind: github
+    repo: langchain-ai/langchain
+    tags: [langchain, framework]
+
+  - id: openrouter
+    name: OpenRouter API Changelog
+    kind: html
+    url: https://openrouter.ai/docs/changelog
+    tags: [openrouter, api]
+
+  - id: llamaindex
+    name: LlamaIndex
+    kind: github
+    repo: run-llama/llama_index
+    tags: [llamaindex, framework]
+
+  - id: groq
+    name: Groq Changelog
+    kind: html
+    url: https://console.groq.com/docs/changelog
+    tags: [groq, inference]
+
+  - id: cohere
+    name: Cohere Changelog
+    kind: html
+    url: https://docs.cohere.com/changelog
+    tags: [cohere, models]
+
+  - id: pinecone
+    name: Pinecone Release Notes
+    kind: html
+    url: https://docs.pinecone.io/release-notes/2026
+    tags: [pinecone, retrieval]
+
+  - id: replicate
+    name: Replicate Changelog
+    kind: html
+    url: https://replicate.com/changelog
+    tags: [replicate, inference]
+
+  - id: cloudflare
+    name: Cloudflare Blog
+    kind: rss
+    url: https://blog.cloudflare.com/rss/
+    tags: [cloudflare, platform]
+
+  - id: nextjs
+    name: Next.js
+    kind: github
+    repo: vercel/next.js
+    tags: [vercel, nextjs]
+
+  - id: fastapi
+    name: FastAPI
+    kind: github
+    repo: fastapi/fastapi
+    tags: [python, api]
+
+  - id: pydantic
+    name: Pydantic
+    kind: github
+    repo: pydantic/pydantic
+    tags: [python, validation]
+
+  - id: supabase
+    name: Supabase Changelog
+    kind: html
+    url: https://supabase.com/changelog
+    tags: [supabase, platform]
+
+  - id: github-changelog
+    name: GitHub Changelog
+    kind: rss
+    url: https://github.blog/changelog/feed/
+    tags: [github, platform]
+
+  - id: xai
+    name: xAI Release Notes
+    kind: html
+    url: https://docs.x.ai/docs/release-notes
+    tags: [xai, models]
+
+  - id: deepseek
+    name: DeepSeek API Updates
+    kind: html
+    url: https://api-docs.deepseek.com/updates
+    tags: [deepseek, models]
+
+  - id: together
+    name: Together AI Changelog
+    kind: html
+    url: https://docs.together.ai/docs/changelog
+    tags: [together, inference]
