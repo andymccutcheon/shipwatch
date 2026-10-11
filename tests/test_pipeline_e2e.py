@@ -20,22 +20,22 @@ def test_full_pipeline_from_fixtures(cfg, store, now) -> None:
         )
     )
     mapping = {
-        "https://openai.example/news/rss.xml": (
+        "https://acme.example/news/rss.xml": (
             200,
-            fixture_bytes("rss_openai.xml"),
+            fixture_bytes("rss_acme.xml"),
             {"etag": "oa-1", "content-type": "application/rss+xml"},
         ),
-        "https://anthropic.example/news": (
+        "https://contoso.example/news": (
             200,
-            fixture_bytes("html_anthropic.html"),
+            fixture_bytes("html_contoso.html"),
             {"etag": "an-1", "content-type": "text/html"},
         ),
-        "https://api.github.com/repos/langchain-ai/langchain/releases?per_page=30": (
+        "https://api.github.com/repos/example/northwind/releases?per_page=30": (
             200,
             fixture_bytes("github_releases.json"),
             {"etag": "gh-1", "content-type": "application/json"},
         ),
-        "https://ai.example/sitemap.xml": (
+        "https://docs.fabrikam.example/sitemap.xml": (
             200,
             fixture_bytes("sitemap.xml"),
             {"etag": "sm-1", "content-type": "application/xml"},
@@ -79,11 +79,10 @@ def test_full_pipeline_from_fixtures(cfg, store, now) -> None:
         2
     ]
     statuses = {o.source_id: o.status for o in stats2.outcomes}
-    assert statuses["openai-news"] == "not_modified"
+    assert statuses["acme-news"] == "not_modified"
 
 
 def test_run_pipeline_accepts_now_kw() -> None:
-    # Guard the public signature used by tests and the sample generator.
     import inspect
 
     from shipwatch.pipeline.run import run_brief

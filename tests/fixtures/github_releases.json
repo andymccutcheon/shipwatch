@@ -1,16 +1,16 @@
 [
   {
-    "name": "langchain 1.2.0",
+    "name": "northwind 1.2.0",
     "tag_name": "v1.2.0",
-    "html_url": "https://github.com/langchain-ai/langchain/releases/tag/v1.2.0",
+    "html_url": "https://github.com/example/northwind/releases/tag/v1.2.0",
     "published_at": "2026-10-08T18:00:00Z",
     "draft": false,
-    "body": "LangChain 1.2.0 adds a stable tool-calling interface and removes the deprecated ConversationalRetrievalChain. This is a breaking API change for users still on the 0.x retrieval helpers."
+    "body": "FICTIONAL. Northwind Agents 1.2.0 adds a stable tool-calling interface and removes the deprecated ConversationalRetrievalChain. This is a breaking API change for users still on the 0.x retrieval helpers."
   },
   {
     "name": "draft only",
     "tag_name": "v1.3.0-rc",
-    "html_url": "https://github.com/langchain-ai/langchain/releases/tag/v1.3.0-rc",
+    "html_url": "https://github.com/example/northwind/releases/tag/v1.3.0-rc",
     "published_at": "2026-10-10T18:00:00Z",
     "draft": true,
     "body": "Should be ignored."

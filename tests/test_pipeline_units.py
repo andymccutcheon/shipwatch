@@ -36,8 +36,8 @@ def test_characterize_kinds() -> None:
     assert (
         characterize(
             make_item(
-                title="Introducing Mistral Large 4",
-                content="We are launching Mistral Large 4 weights.",
+                title="Contoso Large 4 model release",
+                content="We are launching Contoso Large 4 model weights.",
             )
         )
         is ItemKind.MODEL_RELEASE
@@ -54,17 +54,17 @@ def test_characterize_kinds() -> None:
 
 
 def test_dedup_url_and_near_dup() -> None:
-    a = make_item(item_id="a", url="https://openai.example/price-cut?utm_source=rss")
+    a = make_item(item_id="a", url="https://acme.example/price-cut?utm_source=rss")
     b = make_item(
         item_id="b",
-        url="https://openai.example/price-cut/",
+        url="https://acme.example/price-cut/",
         content=a.content + " Extra sentence about prepaid accounts.",
     )
     c = make_item(
         item_id="c",
-        url="https://mirror.example/openai-price-cut",
-        title="OpenAI reduces GPT-5 mini API pricing by 50%",
-        content="OpenAI announced a 50% price reduction for GPT-5 mini input tokens in the API.",
+        url="https://mirror.example/acme-price-cut",
+        title="Acme AI reduces Helio-7 mini API pricing by 50%",
+        content="Acme AI announced a 50% price reduction for Helio-7 mini input tokens in the API.",
     )
     items = [a, b, c]
     dedup_items(items)
@@ -75,19 +75,19 @@ def test_dedup_url_and_near_dup() -> None:
 
 def test_cluster_groups_related_titles() -> None:
     items = [
-        make_item(item_id="p1", title="OpenAI cuts API prices for GPT-5 mini"),
+        make_item(item_id="p1", title="Acme AI cuts API prices for Helio-7 mini"),
         make_item(
             item_id="p2",
             source_id="mirror",
             url="https://mirror.example/x",
-            title="OpenAI reduces GPT-5 mini API prices",
+            title="Acme AI reduces Helio-7 mini API prices",
         ),
         make_item(
             item_id="d1",
-            source_id="anthropic",
-            url="https://anthropic.example/sunset",
+            source_id="contoso",
+            url="https://contoso.example/sunset",
             title="Completions API sunset",
-            content="Anthropic will deprecate Completions.",
+            content="Contoso Models will deprecate Completions.",
             kind=ItemKind.DEPRECATION,
         ),
     ]
@@ -100,7 +100,7 @@ def test_score_boosts_pricing_and_recency() -> None:
     fresh = make_item(item_id="fresh", published_at=NOW)
     old = make_item(
         item_id="old",
-        url="https://openai.example/old",
+        url="https://acme.example/old",
         title="Old SDK tweak",
         content="Minor SDK docs wording.",
         kind=ItemKind.OTHER,
@@ -123,7 +123,7 @@ def test_extract_and_verify_supported_claim() -> None:
 def test_verify_drops_unsupported_claim() -> None:
     item = make_item()
     claim = Claim(
-        text="Anthropic acquired a semiconductor company in Austin yesterday.",
+        text="Contoso Models acquired a semiconductor company in Austin yesterday.",
         source_item_ids=[item.id],
     )
     checked = verify_claim(claim, {item.id: item})

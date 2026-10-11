@@ -19,3 +19,4 @@ briefs/
 !.env.example
 .DS_Store
 examples/.sample-data/
+.live-run/

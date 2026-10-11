@@ -13,8 +13,10 @@ python -m pip install -e ".[dev]"
 ```
 
 Do not put a real `SHIPWATCH_API_KEY`, `OPENROUTER_API_KEY`, or `OPENAI_API_KEY`
-in the repository, in fixtures, or in CI. The test suite uses recorded fixtures
-and must stay green without a key and without the public internet.
+in the repository, in fixtures, or in CI. The test suite uses recorded **fictional** fixtures (Acme AI, Contoso
+Models, Northwind Agents, Fabrikam Docs) and must stay green without a
+key and without the public internet. Do not attribute invented shipping
+news to real companies in fixtures or docs.
 
 ## Checks
 
