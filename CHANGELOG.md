@@ -2,6 +2,10 @@
 
 All notable changes to this project are documented here.
 
+## 0.1.1 — 2026-10-12
+
+- Fix weekly briefings to include only items inside the requested date window.
+
 ## 0.1.0 — 2026-10-11
 
 Initial public release.
