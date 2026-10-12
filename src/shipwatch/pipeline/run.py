@@ -220,7 +220,7 @@ def run_brief(
     stamp = now or now_utc()
     since_label = since or cfg.brief.since
     window_start = parse_since(since_label, now=stamp)
-    items = store.items_since(window_start)
+    items = store.items_since(window_start, until=stamp)
     stats = RunStats(items_considered=len(items))
     if not items:
         briefing = synthesize_extractive(

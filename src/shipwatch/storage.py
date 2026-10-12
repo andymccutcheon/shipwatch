@@ -146,14 +146,22 @@ class Store:
         row = self.conn.execute("SELECT * FROM items WHERE id = ?", (item_id,)).fetchone()
         return _item_from_row(row) if row else None
 
-    def items_since(self, start: datetime, *, include_duplicates: bool = False) -> list[Item]:
+    def items_since(
+        self,
+        start: datetime,
+        *,
+        until: datetime | None = None,
+        include_duplicates: bool = False,
+    ) -> list[Item]:
         rows = self.conn.execute(
             """
             SELECT * FROM items
-            WHERE (published_at IS NULL OR published_at >= ?)
+            WHERE published_at IS NOT NULL
+              AND published_at >= ?
+              AND (? IS NULL OR published_at <= ?)
             ORDER BY published_at DESC
             """,
-            (isoformat(start),),
+            (isoformat(start), isoformat(until), isoformat(until)),
         ).fetchall()
         items = [_item_from_row(r) for r in rows]
         if include_duplicates:

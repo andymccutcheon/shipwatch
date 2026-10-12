@@ -5,9 +5,9 @@ from pathlib import Path
 from shipwatch.fetch.client import PoliteClient
 from shipwatch.models import ItemKind
 from shipwatch.output.render import render_html, render_json, render_markdown, render_rss
-from shipwatch.pipeline.run import run_pipeline
+from shipwatch.pipeline.run import run_brief, run_pipeline
 from shipwatch.storage import Store
-from tests.conftest import NOW, map_transport
+from tests.conftest import NOW, make_item, map_transport
 from tests.fictional_pipeline import (
     EXAMPLES,
     SAMPLE_NOTE,
@@ -93,3 +93,26 @@ def test_run_pipeline_accepts_now_kw() -> None:
 
     assert "now" in inspect.signature(run_brief).parameters
     assert Path(__file__).exists()
+
+
+def test_brief_excludes_items_without_dates_or_outside_window(tmp_path: Path) -> None:
+    cfg = fictional_config(tmp_path / "data", tmp_path / "out")
+    store = Store(tmp_path / "data" / "shipwatch.db")
+    in_window = make_item(item_id="in-window", published_at=NOW)
+    undated = make_item(item_id="undated").model_copy(update={"published_at": None})
+    old = make_item(item_id="old", published_at=NOW.replace(year=2024))
+    for item in (undated, old, in_window):
+        store.upsert_item(item, fetched_at=NOW)
+
+    briefing, items, stats = run_brief(
+        cfg,
+        store,
+        since="7d",
+        no_llm=True,
+        now=NOW,
+        write=False,
+    )
+
+    assert [item.id for item in items] == ["in-window"]
+    assert briefing.selected_item_ids == ["in-window"]
+    assert stats.items_considered == 1
